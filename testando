@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Jogo da Mémoria</title>
+	<style>
+		
+		h1,p{
+			text-align: center;
+		}
+
+		#grade{
+			display: flex;
+			flex-wrap: wrap;
+			width: 520;
+			margin: auto;
+		}
+		img{
+			width:130px;
+		}
+	</style>
+</head>
+<body onload="criarGrade()">
+
+	<h1>Jogo da Memória</h1>
+	<p>Pontos: <span id="pontos"></span></p>
+	<div id="grade"></div>
+
+<script>
+
+
+	const baralho = [
+		{
+			nome: "golfinho"
+			img: "golfinho.jpeg"
+		},
+		{
+			nome: "zebra"
+			img: "zebra.jpeg"
+		},
+	];
+
+	const grade = document.querySelector("#grade");
+
+	function criarGrade(){
+		for(let i = 0; i < baralho.length; i++){
+			let carta = document.createElement("img");
+			carta.id = i;
+			carta.name = baralho[i].nome;
+			carta.src = "duvida.jpeg";
+			grade.appendChild(carta);
+
+		}
+	}
+
+
+
+</script>
+</body>
+
+</html>
