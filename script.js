@@ -63,7 +63,12 @@ const unflipCards = () => {
 
     }, 1500); 
 }
-
+const resultView = document.querySelector('#result')
+//mostrar placar
+resultView.textContent = 'Pares encontrados: '+cardsWon.length
+if(cardsWon.length === cards.length/2){
+    resultView.textContent = 'Parabéns, você ganhou';
+}
 const resetBoard = () => {
 
     [hasFlippedCard, lockBoard] = [false, false];
